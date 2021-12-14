@@ -1,6 +1,8 @@
 import os
 from flask import Flask
 from app.config import config
+from app.view import init_view
+
 
 def create_app(config_name=None):
     #创建Flask实例
@@ -10,9 +12,10 @@ def create_app(config_name=None):
         config_name = os.getenv('FLASK_ENV', 'development')
 
     app.config.from_object(config[config_name])
-    
+
     # 注册蓝图
-    
+
     # 注册路由
-    
+    init_view(app)
+
     return app
