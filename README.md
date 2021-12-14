@@ -1,10 +1,4 @@
-# python-flask
+# python-flask-andinfo
 
-1、测试git UI  `git push`
-
-2、测试`git`命令 `git push`
-
-3、测试推送2
-
-4、测试标签推送2
+1、配置开发、测试、生产环境
 
