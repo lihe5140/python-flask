@@ -1,0 +1,24 @@
+{% extends 'index/base.html' %}
+
+{% block title %}用户列表 {% endblock %}
+
+{% block content %}
+<h1>用户信息</h1>
+<span>当前用户人数：{{users | length}}</span>
+
+<table border="1">
+    <tr>
+        <th>索引</th>
+        <th>用户名</th>
+        <th>密码</th>
+    </tr>
+    {% for user in users %}
+    <tr>
+        <td>{{loop.index}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.psw}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'index/base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>注册</title>
-</head>
+{% block title %}用户注册 {% endblock %}
 
-<body>
-    这是用户注册
-</body>
-
-</html>
+{% block content %}
+<h1>用户注册</h1>
+<form action="{{url_for('user.register')}}" method="post">
+    <input type="text" name="username" placeholder="username">
+    <input type="password" name="psw" placeholder="password">
+    <input type="password" name="repsw" placeholder="repassword">
+    <button type="submit">Register</button>
+</form>
+{% endblock %}

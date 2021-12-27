@@ -7,17 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} {% endblock %}</title>
     {% block andinfocss %} {% endblock %}
+    <style>
+        section {
+            height: 800px;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         {% block header %} {% endblock %}
     </header>
-    {% block content %} {% endblock %}
-    {% block footer %} {% endblock %}
-
+    <section>
+        {% block content %} {% endblock %}
+    </section>
+    <footer>
+        这是底部
+    </footer>
     {% block andinfojs %} {% endblock %}
-
 </body>
 
 </html>
