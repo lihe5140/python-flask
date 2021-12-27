@@ -1,7 +1,6 @@
 from dotenv import dotenv_values
 import sqlparse
 import pymysql
-from app.extensions.init_sqlalchemy import db
 
 config = dotenv_values('.env')
 # MySql配置信息
