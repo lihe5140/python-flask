@@ -65,7 +65,7 @@ def init_db():
     if init_database():
         print('数据库%s创建成功' % str(DATABASE))
     # 项目完成后请放开注释代码
-    # 初识话数据库，记录有数据信息的资料
+    # 初识化数据库，记录有数据信息的资料
     # execute_fromfile('tests/yourSQL.sql')
     print('表创建成功')
     print('请使用 flask run 命令启动程序')

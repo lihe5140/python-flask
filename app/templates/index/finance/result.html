@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查询结果页</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap-table/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap-table/bootstrap-table.css') }}">
+    <script src="{{ url_for('static', filename='/bootstrap-table/bootstrap-table.js')}}"></script>
+</head>
+
+<body>
+    <h1>这是查询结果页</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>报告期</th>
+                <th>审核意见</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for fina_audit in fina_audits %}
+            <tr>
+                <td>{{fina_audit.end_date}}</td>
+                <td>{{fina_audit.audit_result}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>

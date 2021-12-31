@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索分析----finance首页</title>
+</head>
+
+<body>
+    <h1>这是finance首页</h1>
+    <form action="{{url_for('finance.finance_result')}}" method="POST">
+        <input type="text" name="stocks_code" placeholder="请输入您要查询的代码">
+        <p>*注：仅支持代码</p>
+        <button type="submit">立即分析</button>
+    </form>
+</body>
+
+</html>

@@ -35,6 +35,9 @@ pip install -r requirements.txt
 # 初始化数据库
 flask init
 
+# 创建数据库
+flask db init
+
 # 数据库模型修改后需重复命令
 flask db migrate
 flask db upgrade
