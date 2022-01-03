@@ -3,7 +3,6 @@ from app.common.utils.stocks import get_income, get_fina_audit
 from app.models.finance import Fina_audit, Cashflow, Income, Balance
 from app.common.utils.check_stocks_data import get_all_by_endDate
 from app.extensions.init_sqlalchemy import db
-import numpy as np
 
 finance_bp = Blueprint('finance', __name__, url_prefix='/')
 
@@ -26,7 +25,7 @@ def finance_result():
         else:
             stocks_data_clear = stocks_data
             print("数据不存在，应增加")
-        check_res.append(np.ndarray(stocks_data_clear))
+        check_res.append(stocks_data_clear.values.tolist())
         stocks_data_clear.to_sql('fina_audit',
                                  db.get_engine(),
                                  index=None,
